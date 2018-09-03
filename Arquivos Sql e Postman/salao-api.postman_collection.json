@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "75714daa-a7ce-4073-ae95-8acfa2bf56f7",
+		"name": "salao-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastros",
+			"description": "",
+			"item": [
+				{
+					"name": "Pessoa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"nome\" : \"Phablo\",\n\t\"sobrenome\" : \"Tassio\",\n\t\"email\" : \"pt\",\n\t\"cpf\" : \"061024\",\n\t\"telefone\" : \"9133\",\n\t\"endereco\" : {\n\t\t\"cep\" : \"73080\",\n\t\t\"cidade\" : \"sobradinho\",\n\t\t\"descricao\" : \"qms 30\"\n\t}\n\t\n\t\n\t\n\t\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/salao/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salao",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"pessoa\" : {\n\t\t\"id\" : \"1\"\n\t},\n\t\"dias\" : [ {\n\t\t\n\t\t \"id\" : 1\n\t\t \n\t\t\n\t},\n\t{\n\t\t\n\t\t \"id\" : 2\n\t\t \n\t\t\n\t}\n\t\n\t]\n\t\n}\t"
+						},
+						"url": {
+							"raw": "http://localhost:8080/salao/funcionario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salao",
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consultas",
+			"description": null,
+			"item": [
+				{
+					"name": "Funcionario",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/salao/funcionario",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salao",
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Pessoa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:8080/salao/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"salao",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
